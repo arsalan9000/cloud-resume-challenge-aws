@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Arsalan - Cloud & Data Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for professional typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Link to our new stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="resume-container">
+        <!-- HEADER: Name, Title, and Contact Information -->
         <header>
             <h1>Muhammad Arsalan</h1>
             <p class="subtitle">Cloud & Data Engineer</p>
             <div class="contact-info">
                 <span><i class="fas fa-map-marker-alt"></i> Karachi, Sindh</span>
-                <span><i class="fas fa-phone-alt"></i> (+92) 3261718167</span>
                 <a href="mailto:arsalan.waqas.00@gmail.com"><i class="fas fa-envelope"></i> arsalan.waqas.00@gmail.com</a>
                 <a href="https://www.linkedin.com/in/muhammad-arsalan-12b957174/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="https://github.com/arsalan9000" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </header>
 
+        <!-- MAIN CONTENT: Two-column layout -->
         <div class="main-content">
+            
+            <!-- SIDEBAR: For concise, scannable information -->
             <aside class="sidebar">
                 <section id="skills">
                     <h2>Skills</h2>
@@ -51,6 +58,7 @@
                 </section>
             </aside>
 
+            <!-- MAIN COLUMN: For detailed project and experience descriptions -->
             <main class="main-column">
                 <section id="projects">
                     <h2>Data Engineering Projects</h2>
@@ -68,16 +76,8 @@
                         <h3>Tech Graveyard: Trend Monitoring ELT Pipeline</h3>
                         <p class="technologies">Python, GitHub Actions, dbt, DuckDB, Streamlit</p>
                         <ul>
-                            <li>Engineered a serverless, event-driven ELT pipeline using GitHub Actions to automate tracking of programming language trends.</li>
-                            <li>Developed modular, tested data models using dbt to transform raw GitHub API data into analytics-ready tables in DuckDB.</li>
-                        </ul>
-                    </article>
-                    <article class="project">
-                        <h3>Automated Weather Data ETL Pipeline</h3>
-                        <p class="technologies">Python, Pandas, PostgreSQL, REST APIs, ETL</p>
-                        <ul>
-                            <li>Architected an end-to-end ETL pipeline to automatically ingest, process, and store daily weather forecast data from the OpenWeatherMap API.</li>
-                            <li>Designed a normalized relational schema in PostgreSQL and authored idempotent data transformation scripts using Pandas.</li>
+                            <li>Engineered a serverless, event-driven ELT pipeline using GitHub Actions to automate tracking of programming language trends from the GitHub API.</li>
+                            <li>Developed modular, tested data models using dbt to transform raw JSON data into analytics-ready tables in a DuckDB data warehouse.</li>
                         </ul>
                     </article>
                 </section>
@@ -99,10 +99,12 @@
             </main>
         </div>
 
+        <!-- FOOTER: Visitor Counter and Link to Blog/README -->
         <footer>
             <p>Visitor Count: <span id="visitor-count">...</span></p>
             <p><a href="https://github.com/arsalan9000/cloud-resume-challenge-aws/blob/main/README.md" target="_blank">Read about how this website was built.</a></p>
         </footer>
+
     </div>
     <script src="script.js"></script>
 </body>
