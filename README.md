@@ -6,8 +6,6 @@ This repository contains all the code for my submission to the [Cloud Resume Cha
 
 This project is a static resume website hosted on AWS, featuring a dynamic visitor counter powered by a serverless backend. The entire infrastructure is defined as code and deployed automatically via CI/CD pipelines.
 
-![Architecture Diagram](https://your-link-to-architecture-diagram.com/diagram.png) 
-*(Note: You can create a diagram using a tool like diagrams.net and link it here later if you wish!)*
 
 ### Frontend
 - **Hosting:** The static website (HTML, CSS, JavaScript) is hosted in an **Amazon S3** bucket.
