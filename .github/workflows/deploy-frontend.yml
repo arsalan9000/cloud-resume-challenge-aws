@@ -1,0 +1,28 @@
+name: Deploy Frontend to AWS
+
+on:
+  push:
+    branches:
+      - main # Run this workflow on pushes to the main branch
+    paths:
+      - 'frontend/**' # Only run if files inside the 'frontend' folder change
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-north-1 # The region of your S3 bucket
+
+      - name: Deploy static site to S3 bucket
+        run: aws s3 sync ./frontend s3://muhammadarsalan.site --delete
+      
+      - name: Invalidate CloudFront distribution
+        run: aws cloudfront create-invalidation --distribution-id E2HNJOX6NWVN8P --paths "/*"
