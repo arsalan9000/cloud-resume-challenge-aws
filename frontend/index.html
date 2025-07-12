@@ -5,104 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Arsalan - Cloud & Data Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="resume-container">
         <header>
-            <h1>Muhammad@Arsalan </h1>
+            <h1>Muhammad Arsalan</h1>
+            <p class="subtitle">Cloud & Data Engineer</p>
             <div class="contact-info">
-                <span>Karachi, Sindh</span> |
-                <span><i class="fas fa-phone-alt"></i> (+92) 3261718167</span> |
-                <a href="mailto:arsalan.waqas.00@gmail.com"><i class="fas fa-envelope"></i> arsalan.waqas.00@gmail.com</a> |
-                <a href="https://www.linkedin.com/in/muhammad-arsalan-12b957174/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+                <span><i class="fas fa-map-marker-alt"></i> Karachi, Sindh</span>
+                <span><i class="fas fa-phone-alt"></i> (+92) 3261718167</span>
+                <a href="mailto:arsalan.waqas.00@gmail.com"><i class="fas fa-envelope"></i> arsalan.waqas.00@gmail.com</a>
+                <a href="https://www.linkedin.com/in/muhammad-arsalan-12b957174/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="https://github.com/arsalan9000" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </header>
 
-        <main>
-            <section id="skills">
-                <h2>Technical Skills</h2>
-                <p><strong>Languages & Skills:</strong> Python, SQL, Excel</p>
-                <p><strong>Data Pipeline & Warehousing:</strong> ETL/ELT Design, dbt, DuckDB, PostgreSQL, Pandas, Data Modeling, Pipeline Orchestration, AWS</p>
-                <p><strong>Developer Tools & Platforms:</strong> Git, GitHub Actions (CI/CD), Docker, Streamlit, VS Code, REST APIs, Jupyter Notebooks</p>
-                <p><strong>ML & Data Science:</strong> Scikit-learn, TensorFlow, Exploratory Data Analysis, SHAP</p>
-            </section>
+        <div class="main-content">
+            <aside class="sidebar">
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <h3>Languages & Core Skills</h3>
+                    <p>Python, SQL, YAML, Excel</p>
+                    <h3>Cloud & Data Platforms</h3>
+                    <p>AWS (S3, CloudFront, API Gateway, Lambda, DynamoDB, IAM), dbt, DuckDB, PostgreSQL, Serverless Architecture</p>
+                    <h3>Developer Tools & DevOps</h3>
+                    <p>Git, GitHub Actions (CI/CD), Infrastructure as Code (IaC), AWS SAM, Docker, REST APIs, VS Code</p>
+                </section>
+                
+                <section id="education">
+                    <h2>Education</h2>
+                    <div class="education-entry">
+                        <h3>BS Software Engineering</h3>
+                        <p class="institution">Institute of Business Management</p>
+                        <p class="date">Jan 2021 – Present</p>
+                    </div>
+                </section>
 
-            <section id="projects">
-                <h2>Data Engineering Projects</h2>
-                <article class="project">
-                    <h3>Tech Graveyard: Trend Monitoring ELT Pipeline <span class="technologies">| Python, GitHub Actions, dbt, DuckDB, Streamlit</span></h3>
-                    <ul>
-                        <li>Engineered a serverless, event-driven ELT pipeline using GitHub Actions to automate tracking of programming language trends.</li>
-                        <li>Orchestrated a weekly workflow to extract data from the GitHub REST API and load it into a DuckDB data warehouse.</li>
-                        <li>Developed modular, tested data models using dbt to transform raw API data into analytics-ready tables.</li>
-                        <li>Built and deployed an interactive Streamlit dashboard on Streamlit Community Cloud for live data visualization.</li>
-                    </ul>
-                </article>
-                <article class="project">
-                    <h3>Automated Weather Data ETL Pipeline <span class="technologies">| Python, Pandas, PostgreSQL, REST APIs, ETL</span></h3>
-                    <ul>
-                        <li>Architected a robust, end-to-end ETL pipeline to automatically ingest, process, and store daily weather forecast data.</li>
-                        <li>Automated data ingestion from the OpenWeatherMap REST API and managed workflow orchestration using Windows Task Scheduler.</li>
-                        <li>Designed and implemented a normalized relational schema in PostgreSQL and managed data loading using psycopg2.</li>
-                        <li>Authored idempotent Python scripts for data cleaning and transformation with Pandas, ensuring pipeline reliability.</li>
-                    </ul>
-                </article>
-            </section>
+                <section id="coursework">
+                    <h2>Relevant Coursework</h2>
+                    <p>Big Data Analytics, Data Structures & Algorithms (DSA), Business Process Engineering, Operating Systems</p>
+                </section>
+            </aside>
 
-            <section id="experience">
-                <h2>Work Experience</h2>
-                <article class="job">
-                    <div class="job-header">
-                        <div>
+            <main class="main-column">
+                <section id="projects">
+                    <h2>Data Engineering Projects</h2>
+                    <article class="project">
+                        <h3>Cloud Resume Challenge</h3>
+                        <p class="technologies">AWS (S3, CloudFront, Lambda, DynamoDB, API Gateway), IaC (AWS SAM), CI/CD (GitHub Actions), Python, JavaScript</p>
+                        <ul>
+                            <li>Engineered a full-stack, serverless web application on AWS to host a personal resume, featuring a dynamic visitor counter.</li>
+                            <li>Developed a Python Lambda function with a DynamoDB NoSQL backend to process API requests, increment, and store visitor data.</li>
+                            <li>Automated the entire infrastructure deployment using Infrastructure as Code (IaC) with the AWS Serverless Application Model (SAM).</li>
+                            <li>Built and configured separate CI/CD pipelines using GitHub Actions for automated deployment of both frontend and backend stacks.</li>
+                        </ul>
+                    </article>
+                    <article class="project">
+                        <h3>Tech Graveyard: Trend Monitoring ELT Pipeline</h3>
+                        <p class="technologies">Python, GitHub Actions, dbt, DuckDB, Streamlit</p>
+                        <ul>
+                            <li>Engineered a serverless, event-driven ELT pipeline using GitHub Actions to automate tracking of programming language trends.</li>
+                            <li>Developed modular, tested data models using dbt to transform raw GitHub API data into analytics-ready tables in DuckDB.</li>
+                        </ul>
+                    </article>
+                    <article class="project">
+                        <h3>Automated Weather Data ETL Pipeline</h3>
+                        <p class="technologies">Python, Pandas, PostgreSQL, REST APIs, ETL</p>
+                        <ul>
+                            <li>Architected an end-to-end ETL pipeline to automatically ingest, process, and store daily weather forecast data from the OpenWeatherMap API.</li>
+                            <li>Designed a normalized relational schema in PostgreSQL and authored idempotent data transformation scripts using Pandas.</li>
+                        </ul>
+                    </article>
+                </section>
+                
+                <section id="experience">
+                    <h2>Work Experience</h2>
+                    <article class="job">
+                        <div class="job-header">
                             <h3>Data Annotator</h3>
-                            <p class="company">CNTXT AI</p>
+                            <span class="date">Aug 2024 – May 2025</span>
                         </div>
-                        <div class="date-location">
-                            <p>Aug 2024 – May 2025</p>
-                            <p>Karachi, SD</p>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>Processed and structured complex multilingual datasets to train industry-specific AI models.</li>
-                        <li>Developed Python scripts to automate data cleaning and preprocessing tasks, improving data quality and team efficiency.</li>
-                        <li>Partnered with software engineers to define data schemas and refine annotation guidelines for consistent labeling.</li>
-                    </ul>
-                </article>
-            </section>
-
-            <section id="education">
-                <h2>Education</h2>
-                <article class="education-entry">
-                    <div class="education-header">
-                        <div>
-                            <h3>Institute of Business Management</h3>
-                            <p class="degree">BS Software Engineering</p>
-                        </div>
-                        <div class="date-location">
-                            <p>Jan 2021 – Present</p>
-                            <p>Karachi, SD</p>
-                        </div>
-                    </div>
-                </article>
-            </section>
-
-            <section id="coursework">
-                <h2>Relevant Coursework</h2>
-                <p><strong>Core CS:</strong> Business Process Engineering, Data Structures & Algorithms (DSA), Object-Oriented Programming, Operating Systems</p>
-                <p><strong>Data & AI:</strong> Big Data Analytics, Natural Language Processing</p>
-                <p><strong>Operations Management:</strong> Project Management, Business Process Engineering</p>
-            </section>
-        </main>
+                        <p class="company">CNTXT AI | Karachi, SD</p>
+                        <ul>
+                            <li>Processed and structured complex multilingual datasets to train industry-specific AI models.</li>
+                            <li>Developed Python scripts to automate data cleaning and preprocessing tasks, improving data quality and team efficiency.</li>
+                        </ul>
+                    </article>
+                </section>
+            </main>
+        </div>
 
         <footer>
-            <!-- This is where your visitor counter will be updated by JavaScript -->
-            <p>Visitor Count: <span id="visitor-count">Loading...</span></p>
-            <p><a href="LINK-TO-YOUR-BLOG-POST" target="_blank">Read about how this website was built.</a></p>
+            <p>Visitor Count: <span id="visitor-count">...</span></p>
+            <p><a href="https://github.com/arsalan9000/cloud-resume-challenge-aws/blob/main/README.md" target="_blank">Read about how this website was built.</a></p>
         </footer>
     </div>
-    <!-- JavaScript file will be added later in the challenge -->
     <script src="script.js"></script>
 </body>
 </html>

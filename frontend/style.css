@@ -1,128 +1,159 @@
-/* --- Basic Setup & Typography --- */
+/* --- Global Setup & Fonts --- */
 body {
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-    line-height: 1.6;
-    background-color: #f8f9fa; /* A light grey background */
-    color: #333;
+    font-family: 'Lato', sans-serif; /* A clean, modern sans-serif font */
+    line-height: 1.7;
+    background-color: #f4f7f6;
+    color: #4a4a4a;
     margin: 0;
-    padding: 20px;
+    padding: 30px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .resume-container {
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: 20px auto;
     background-color: #ffffff;
-    padding: 40px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
 }
 
 a {
-    color: #0056b3;
+    color: #007BFF;
     text-decoration: none;
+    transition: color 0.2s ease-in-out;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #0056b3;
 }
 
 h1, h2, h3 {
+    font-family: 'Merriweather', serif; /* A classic, readable serif for headings */
+    color: #2c3e50;
     margin: 0;
     padding: 0;
-    color: #222;
 }
 
-/* --- Header & Contact Info --- */
+/* --- Header Section --- */
 header {
     text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #eee;
-    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 40px;
 }
 
 header h1 {
-    font-size: 2.8em;
-    margin-bottom: 10px;
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+header .subtitle {
+    font-size: 1.3em;
+    font-weight: 300;
+    color: #7f8c8d;
+    margin-bottom: 20px;
 }
 
 .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px; /* Row and column gap */
+    font-size: 0.9em;
+    color: #555;
+}
+
+.contact-info i {
+    margin-right: 6px;
+    color: #007BFF;
+}
+
+/* --- Two-Column Layout --- */
+.main-content {
+    display: flex;
+    gap: 50px;
+}
+
+.sidebar {
+    width: 35%;
+    flex-shrink: 0;
+}
+
+.main-column {
+    width: 65%;
+}
+
+/* --- Section Styling --- */
+section {
+    margin-bottom: 35px;
+}
+
+section h2 {
+    font-size: 1.6em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+/* --- Sidebar Sections (Skills, Education) --- */
+.sidebar h3 {
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.sidebar p, .sidebar .date {
+    margin: 0 0 10px 0;
     font-size: 0.95em;
     color: #555;
 }
 
-.contact-info span, .contact-info a {
-    margin: 0 8px;
+.education-entry .institution {
+    font-weight: 700;
+    color: #444;
 }
 
-.contact-info i {
-    margin-right: 5px;
+/* --- Main Column Sections (Projects, Experience) --- */
+.project, .job {
+    margin-bottom: 25px;
 }
 
-/* --- Main Sections --- */
-main section {
-    margin-bottom: 30px;
+.project h3, .job-header h3 {
+    font-size: 1.25em;
+    margin-bottom: 3px;
 }
 
-main h2 {
-    font-size: 1.5em;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #333;
-    margin-bottom: 20px;
-}
-
-/* --- Skills & Coursework --- */
-#skills p, #coursework p {
-    margin: 5px 0;
-}
-
-/* --- Projects --- */
-.project {
-    margin-bottom: 20px;
-}
-
-.project h3 {
-    font-size: 1.2em;
-    font-weight: normal;
-}
-
-.project .technologies {
+.technologies, .company {
     font-style: italic;
-    color: #666;
-    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+    display: block;
 }
 
-/* --- Experience & Education (Two-column layout) --- */
-.job-header, .education-header {
+.job-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 5px;
+    align-items: baseline;
+    margin-bottom: 3px;
 }
 
-.job-header h3, .education-header h3 {
-    font-size: 1.2em;
-}
-
-.job .company, .education-entry .degree {
-    font-style: italic;
+.job-header .date, .company {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-size: 0.95em;
     color: #555;
-    margin: 0;
 }
 
-.date-location {
-    text-align: right;
-    color: #555;
-    white-space: nowrap; /* Prevents wrapping */
-}
-
-.date-location p {
-    margin: 0;
-}
-
-/* --- Lists --- */
 ul {
     padding-left: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
+    list-style-type: disc;
 }
 
 li {
@@ -133,12 +164,13 @@ li {
 footer {
     text-align: center;
     margin-top: 40px;
-    padding-top: 20px;
-    border-top: 2px solid #eee;
-    color: #777;
+    padding-top: 25px;
+    border-top: 1px solid #e0e0e0;
+    color: #95a5a6;
     font-size: 0.9em;
 }
 
-footer p {
-    margin: 5px 0;
+#visitor-count {
+    font-weight: 700;
+    color: #3498db;
 }
