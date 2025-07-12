@@ -186,3 +186,15 @@ footer p { margin-bottom: 5px; }
     color: var(--secondary-color);
     font-size: 1.1em;
 }
+
+/* --- Sidebar-specific list styling for a cleaner look --- */
+.sidebar ul {
+    list-style-position: outside;
+    padding-left: 18px; /* Slightly less padding */
+}
+
+.sidebar li {
+    margin-bottom: 5px; /* Tighter spacing between items */
+    font-size: 0.95em;
+    color: #555;
+}
