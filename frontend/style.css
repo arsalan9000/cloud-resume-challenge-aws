@@ -1,0 +1,144 @@
+/* --- Basic Setup & Typography --- */
+body {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* A light grey background */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.resume-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+/* --- Header & Contact Info --- */
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    font-size: 0.95em;
+    color: #555;
+}
+
+.contact-info span, .contact-info a {
+    margin: 0 8px;
+}
+
+.contact-info i {
+    margin-right: 5px;
+}
+
+/* --- Main Sections --- */
+main section {
+    margin-bottom: 30px;
+}
+
+main h2 {
+    font-size: 1.5em;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+}
+
+/* --- Skills & Coursework --- */
+#skills p, #coursework p {
+    margin: 5px 0;
+}
+
+/* --- Projects --- */
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.project .technologies {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* --- Experience & Education (Two-column layout) --- */
+.job-header, .education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.job-header h3, .education-header h3 {
+    font-size: 1.2em;
+}
+
+.job .company, .education-entry .degree {
+    font-style: italic;
+    color: #555;
+    margin: 0;
+}
+
+.date-location {
+    text-align: right;
+    color: #555;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.date-location p {
+    margin: 0;
+}
+
+/* --- Lists --- */
+ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    color: #777;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}

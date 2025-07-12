@@ -1,0 +1,58 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'Cloud Resume Challenge Backend - Deploys a Lambda function, DynamoDB
+  table, and API Gateway.
+
+  '
+Globals:
+  Function:
+    Timeout: 5
+Resources:
+  VisitorCounterTable:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      TableName: cloud-resume-views
+      PrimaryKey:
+        Name: id
+        Type: String
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+  MyApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      CorsConfiguration:
+        AllowOrigins:
+        - https://muhammadarsalan.site
+        AllowHeaders:
+        - Content-Type
+        AllowMethods:
+        - GET
+        - OPTIONS
+  VisitorCounterFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: VisitorCounterFunction
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+      - x86_64
+      Policies:
+      - DynamoDBCrudPolicy:
+          TableName:
+            Ref: VisitorCounterTable
+      Events:
+        ApiEvent:
+          Type: HttpApi
+          Properties:
+            Path: /views
+            Method: GET
+            ApiId:
+              Ref: MyApi
+    Metadata:
+      SamResourceId: VisitorCounterFunction
+Outputs:
+  ApiUrl:
+    Description: API Gateway endpoint URL
+    Value:
+      Fn::Sub: https://${MyApi}.execute-api.${AWS::Region}.amazonaws.com/
